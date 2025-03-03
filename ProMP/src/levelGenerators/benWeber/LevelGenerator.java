@@ -113,8 +113,12 @@ public class LevelGenerator implements MarioLevelGenerator {
         }
     }
 
-    public String getGeneratedLevel(MarioLevelModel model, MarioTimer timer) {
-        this.rand = new Random();
+    public String getGeneratedLevel(MarioLevelModel model, MarioTimer timer){
+        return getGeneratedLevel(model, timer, 0);
+    }
+
+    public String getGeneratedLevel(MarioLevelModel model, MarioTimer timer, long seed) {
+        this.rand = new Random(seed);
         model.clearMap();
 
         ArrayList<Integer> ground = new ArrayList<Integer>();
@@ -162,6 +166,8 @@ public class LevelGenerator implements MarioLevelGenerator {
 
             lastY = y;
             y = nextY;
+
+            //SaveLevel.saveLevelStringToFile(model.getMap(), "levels_ProMP/level.txt");
         }
 
         // non colliding hills
@@ -220,7 +226,7 @@ public class LevelGenerator implements MarioLevelGenerator {
         for (Integer h : ground) {
             if (x > minX && rand.nextDouble() < CHANCE_PIPE) {
                 if (h == lastY && lastlastY <= lastY && x > (lastX + 1)) {
-                    int height = PIPE_MIN_HEIGHT + (int) (Math.random() * PIPE_HEIGHT);
+                    int height = PIPE_MIN_HEIGHT + (int) (rand.nextDouble() * PIPE_HEIGHT);
                     placePipe(model, x - 1, h, height);
                     lastX = x;
                 }
@@ -295,7 +301,7 @@ public class LevelGenerator implements MarioLevelGenerator {
         x = 0;
         for (Integer h : ground) {
             if (x > 5 && rand.nextDouble() < CHANCE_COIN) {
-                y = h - (int) (1 + Math.random() * COIN_HEIGHT);
+                y = h - (int) (1 + rand.nextDouble() * COIN_HEIGHT);
 
                 char tile = model.getBlock(x, y);
                 if (tile == MarioLevelModel.EMPTY) {
@@ -306,8 +312,8 @@ public class LevelGenerator implements MarioLevelGenerator {
             x++;
         }
         // place the exit
-        this.xExit = model.getWidth() - 5;
-        model.setBlock(this.xExit, this.yExit, MarioLevelModel.MARIO_EXIT);
+        //this.xExit = model.getWidth() - 5;
+        //model.setBlock(this.xExit, this.yExit, MarioLevelModel.MARIO_EXIT);
         return model.getMap();
     }
 
