@@ -1,6 +1,8 @@
 package dk.itu.mario.level;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import dk.itu.mario.MarioInterface.LevelInterface;
 import dk.itu.mario.engine.sprites.SpriteTemplate;
@@ -218,6 +220,60 @@ public class Level implements LevelInterface
 		// TODO Auto-generated method stub
 		return "";
 	}
+
+    /*
+     *  GROUND = "X"
+     *  BREAKABLE = "S"
+     *  EMPTY = "-"
+     *  FULL_QUESTION_BLOCK = "?"
+     *  EMPTY_QUESTION_BLOCK = "Q"
+     *  ENEMY = "E"
+     *  TOP_LEFT_PIPE = "<"
+     *  TOP_RIGHT_PIPE = ">"
+     *  LEFT_PIPE = "["
+     *  RIGHT_PIPE = "]"
+     *  COIN = "o"
+     *  CANNON_TOP = "B"
+     *  CANNON_BOTTOM = "b"
+     */
+    public char getChar(int x, int y) {
+        byte value = getBlock(x, y);
+        switch (value) {
+            case EMPTY_SPACE:
+                return '-';
+            case BLOCK_EMPTY:
+                return 'S';
+            case BLOCK_POWERUP:
+                return '?';
+            case BLOCK_COIN:
+                return '?';
+            case COIN:
+                return 'o';
+            case TUBE_TOP_LEFT:
+                return '<';
+            case TUBE_TOP_RIGHT:
+                return '>';
+            case TUBE_SIDE_LEFT:
+                return '[';
+            case TUBE_SIDE_RIGHT:
+                return ']';
+            default:
+                return 'X';
+        }
+    }
+
+    public String FromBytesToTiles(){
+        String tiles = "";
+
+        for(int y=0; y<height; y++){
+            for(int x=0; x<width; x++){
+                tiles += getChar(x, y);
+            }
+            tiles += "\n";
+        }
+
+        return tiles;
+    }
 
 
 }

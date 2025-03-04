@@ -28,6 +28,7 @@ import dk.itu.mario.scene.WinScene;
 import dk.itu.mario.engine.sonar.FakeSoundEngine;
 import dk.itu.mario.engine.sonar.SonarSoundEngine;
 import dk.itu.mario.engine.sprites.Mario;
+import dk.itu.mario.engine.util.PRNG;
 
 public class MarioComponent extends JComponent implements Runnable, KeyListener, FocusListener, MouseListener
 	{
@@ -320,7 +321,8 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
 		     * Part of the fun increaser
 		     */
 		    public void toRandomGame(){
-		    	randomLevel = new LevelSceneTest(graphicsConfiguration,this,new Random().nextLong(),0,0,false);
+		    	//randomLevel = new LevelSceneTest(graphicsConfiguration,this,new Random().nextLong(),0,0,false);
+				randomLevel = new LevelSceneTest(graphicsConfiguration,this,PRNG.random.nextLong(),0,0,false);
 
 		    	Mario.fire = false;
 		    	Mario.large = false;
@@ -335,7 +337,8 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
 
 		    public void toCustomGame(){
 
-		    	randomLevel = new LevelSceneTest(graphicsConfiguration,this,new Random().nextLong(),0,0,true);
+		    	//randomLevel = new LevelSceneTest(graphicsConfiguration,this,new Random().nextLong(),0,0,true);
+				randomLevel = new LevelSceneTest(graphicsConfiguration,this,PRNG.random.nextLong(),0,0,true);
 
 		    	Mario.fire = false;
 		    	Mario.large = false;

@@ -2,6 +2,8 @@ package dk.itu.mario.geneticAlgorithm;
 
 import java.util.Random;
 
+import dk.itu.mario.engine.util.PRNG;
+
 public class GroundIndividual extends Individual {
 
 	public static final int MIN_GROUND = 2;
@@ -19,7 +21,8 @@ public class GroundIndividual extends Individual {
 		
 		chromossome = new int[chromossomeSize/MIN_GROUND];
 		
-		Random randomGenerator = new Random();
+		//Random randomGenerator = new Random();
+		Random randomGenerator = PRNG.random;
 		for(int i = 0; i < chromossomeSize/MIN_GROUND; i++)
 		{
 			chromossome[i] = randomGenerator.nextInt(MAX_GROUND_HEIGHT);

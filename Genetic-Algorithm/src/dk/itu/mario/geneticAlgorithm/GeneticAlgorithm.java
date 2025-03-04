@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 
+import dk.itu.mario.engine.util.PRNG;
+
 public abstract class GeneticAlgorithm {
 
 	float lastBestFitness;
@@ -60,7 +62,8 @@ public abstract class GeneticAlgorithm {
 	protected Individual []Tournament(Individual population[], int tournamentSize)
 	{
 		// A tournament crossover
-		Random generator = new Random();
+		//Random generator = new Random();
+		Random generator = PRNG.random;
 		Individual selectedIndividuals[] = new Individual[population.length];
 		
 		for(int i = 0; i < population.length; i++)
@@ -82,7 +85,8 @@ public abstract class GeneticAlgorithm {
 	
 	protected void onePointCrossover(Individual parent1, Individual parent2, Individual son1, Individual son2) {
 		
-		Random generator = new Random();
+		//Random generator = new Random();
+		Random generator = PRNG.random;
 		
 		//A 1-point crossover
 		int groundChromossomeSize = parent1.getChromossome().length;
@@ -97,7 +101,8 @@ public abstract class GeneticAlgorithm {
 	
 	protected void uniformCrossover(Individual parent1, Individual parent2, Individual son1, Individual son2) {
 		
-		Random rand = new Random(); 
+		//Random rand = new Random();
+		Random rand = PRNG.random;
 		
 		for(int i = 0; i < son1.getChromossome().length; i++)
 		{

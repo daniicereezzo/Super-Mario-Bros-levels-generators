@@ -2,6 +2,8 @@ package dk.itu.mario.geneticAlgorithm;
 
 import java.util.Random;
 
+import dk.itu.mario.engine.util.PRNG;
+
 public class CoinsIndividual extends Individual {
 
 	public static final int MAX_COINS_HEIGHT = 4;
@@ -17,7 +19,8 @@ public class CoinsIndividual extends Individual {
         this.maxFitness = maxFitness;
         this.desiredSparseness = desiredSparseness;
 		
-		Random gerador = new Random();
+		//Random gerador = new Random();
+        Random gerador = PRNG.random;
 		
 		chromossome = new int[chromossomeSize];
 		

@@ -6,6 +6,7 @@ import java.util.Random;
 import dk.itu.mario.MarioInterface.GamePlay;
 import dk.itu.mario.MarioInterface.LevelInterface;
 import dk.itu.mario.engine.sprites.SpriteTemplate;
+import dk.itu.mario.engine.util.PRNG;
 import dk.itu.mario.geneticAlgorithm.GroundIndividual;
 import dk.itu.mario.geneticAlgorithm.Individual;
 
@@ -214,7 +215,8 @@ public class BestGAIndividualLevel extends Level implements LevelInterface {
     	{
     		if(Math.abs(ground[i] - lastHeight) >= 5)
     		{
-    			Random gerador = new Random();
+    			//Random gerador = new Random();
+				Random gerador = PRNG.random;
     			
     			int blocksAmount = gerador.nextInt(3) + 1;
     			

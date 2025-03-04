@@ -2,6 +2,8 @@ package dk.itu.mario.geneticAlgorithm;
 
 import java.util.Random;
 
+import dk.itu.mario.engine.util.PRNG;
+
 public class GroundGA extends GeneticAlgorithm {
 			
 	private int tournamentSize;
@@ -47,7 +49,8 @@ public class GroundGA extends GeneticAlgorithm {
 	@Override
 	protected void crossOver() {
 		
-		Random rand = new Random();
+		//Random rand = new Random();
+		Random rand = PRNG.random;
 		
 		for(int i = 0; i < matingPool.length/2; i += 2)
 		{
@@ -68,7 +71,8 @@ public class GroundGA extends GeneticAlgorithm {
 	@Override
 	protected void mutation() {
 		
-		Random rand = new Random(); 
+		//Random rand = new Random();
+		Random rand = PRNG.random;
 		
 		for(int i = 0; i < population.length; i++) {
 			

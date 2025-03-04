@@ -16,7 +16,7 @@ public class BgRenderer
     private static final Color transparent = new Color(0, 0, 0, 0);
     private Level level;
 
-    private Random random = new Random();
+    //private Random random = new Random();
     public boolean renderBehaviors = false;
 
     private int width;
