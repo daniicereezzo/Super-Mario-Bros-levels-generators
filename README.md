@@ -26,7 +26,7 @@ Every generator in this repository follows a similar build process:
  - Name of the environment you created.
  - Seed you want to use for reproducibility.
  - Number of levels you want to generate.
-8. Execute the `generate.sh` script to generate the levels.
+7. Execute the `generate.sh` script to generate the levels.
 
 ## Specific instructions for each generator
 
@@ -40,7 +40,8 @@ Every generator in this repository follows a similar build process:
   cd ProMP
   chmod +x ./generate.sh
   ```
-  Finally, fill in the missing data in the generate.sh script.
+  
+  Note: Remember to fill in the missing data in the generate.sh script.
   
 - **Execution command:**
   ```sh
