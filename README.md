@@ -10,23 +10,24 @@ This README provides some guidelines on how to build and run each project. Never
 
 ## Prerequisites
 
-Make sure you have installed a `conda` distribution before building and running any project.
+Make sure you have installed a conda distribution before building and running any project.
 
 ## General guidelines
 
 Every generator in this repository follows a similar build process:
 
 1. Create a conda environment for that generator.
-2. Activate the environment.
-3. Install the generator dependencies if needed (following the specific instructions for each generator).
-4. Deactivate the environment.
-5. Navigate to the generator subfolder:
-6. Complete the `generate.sh` script with the following data:
+2. If more dependencies are needed:
+ - Activate the environment.
+ - Install the generator dependencies (following the specific instructions for each generator).
+ - Deactivate the environment.
+3. Navigate to the generator subfolder:
+4. Complete the `generate.sh` script with the following data:
  - Path of your conda distribution.
  - Name of the environment you created.
  - Seed you want to use for reproducibility.
  - Number of levels you want to generate.
-7. Execute the `generate.sh` script to generate the levels.
+5. Execute the `generate.sh` script to generate the levels.
 
 ## Specific instructions for each generator
 
