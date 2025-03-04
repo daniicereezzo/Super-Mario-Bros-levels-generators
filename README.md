@@ -51,7 +51,8 @@ Every generator in this repository follows a similar build process:
 
 If you use this repository in your research, please cite our paper:
 
-**Paper Title:** 'From Traditional Methods to GPT-based Models for 2D Video Game Level Procedural Content Generation: An Empirical Study' 
+**Paper Title:** 'From Traditional Methods to GPT-based Models for 2D Video Game Level Procedural Content Generation: An Empirical Study'
+
 **Authors:** Daniel Cerezo, Isaac Triguero
 
 BibTeX citation:
