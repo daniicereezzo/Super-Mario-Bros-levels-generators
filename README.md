@@ -52,6 +52,29 @@ Every generator in this repository follows a similar build process:
   ./generate.sh
   ```
 
+
+### GeneticAlgorithm
+
+- **Language:** Java
+- **Dependencies:**
+  - Java Development Kit (JDK) 8
+- **Build instructions:**
+  
+  ```sh
+  conda create -n env_genetic_algorithm openjdk=8
+  cd ProMP
+  chmod +x ./generate.sh
+  ```
+  
+  Note: You can change the name of the conda environment from `env_genetic_algorithm` to any name you prefer.
+  
+  **IMPORTANT:** Remember to fill in the missing data in the `generate.sh` script.
+  
+- **Execution command:**
+  ```sh
+  ./generate.sh
+  ```
+
 ## Citation
 
 If you use this repository in your research, please cite our paper:
