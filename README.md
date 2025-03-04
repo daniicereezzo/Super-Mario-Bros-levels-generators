@@ -28,7 +28,7 @@ Every generator in this repository follows a similar build process:
  - Number of levels you want to generate.
 8. Execute the `generate.sh` script to generate the levels.
 
-## Generator-Specific Instructions
+## Specific instructions for each generator
 
 ### ProMP
 
