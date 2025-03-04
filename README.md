@@ -43,7 +43,9 @@ Every generator in this repository follows a similar build process:
   chmod +x ./generate.sh
   ```
   
-  Note: Remember to fill in the missing data in the generate.sh script.
+  Note: You can change the name of the conda environment from `env_promp` to any name you prefer.
+  
+  **IMPORTANT:** Remember to fill in the missing data in the `generate.sh` script.
   
 - **Execution command:**
   ```sh
