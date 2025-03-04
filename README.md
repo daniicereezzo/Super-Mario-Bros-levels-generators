@@ -10,9 +10,9 @@ This README provides some guidelines on how to build and run each project. Never
 
 ## Prerequisites
 
-Make sure you have installed a conda distribution before building and running any project.
+Make sure you have installed a `conda` distribution before building and running any project.
 
-## General Guidelines
+## General guidelines
 
 Every generator in this repository follows a similar build process:
 
@@ -33,7 +33,7 @@ Every generator in this repository follows a similar build process:
 ### ProMP
 
 - **Language:** Java
-- **Build Instructions:**
+- **Build instructions:**
   
   ```sh
   conda create -n env_promp openjdk=8
@@ -42,7 +42,7 @@ Every generator in this repository follows a similar build process:
   ```
   Finally, fill in the missing data in the generate.sh script.
   
-- **Run Command:**
+- **Execution command:**
   ```sh
   ./generate.sh
   ```
