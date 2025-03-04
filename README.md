@@ -33,6 +33,8 @@ Every generator in this repository follows a similar build process:
 ### ProMP
 
 - **Language:** Java
+- **Dependencies:**
+  - Java Development Kit (JDK) 1.8
 - **Build instructions:**
   
   ```sh
