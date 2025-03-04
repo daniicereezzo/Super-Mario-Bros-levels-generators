@@ -21,7 +21,7 @@ conda activate $conda_env_path
 # Example: seed=2024
 seed=your_seed
 
-# Set the number of levels to generate
+# TODO: Set the number of levels to generate
 # Example: n_levels=200
 n_levels=your_number_of_levels
 
