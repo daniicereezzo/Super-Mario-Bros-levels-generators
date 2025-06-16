@@ -1,0 +1,1 @@
+Generate exactly five levels of Super Mario Bros, trying to make them challenging for the player. Please ensure visual coherence, format and size constraints, respecting always the size of 14 rows of 140 characters each and using only the characters specified!!

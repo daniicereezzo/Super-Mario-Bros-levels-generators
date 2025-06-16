@@ -16,7 +16,7 @@ public class generate {
         Random main_random = new Random();
         main_random.setSeed(Long.parseLong(args[0]));
 
-        int levelWidth = 140;
+        int levelWidth = 126;   // The algorithm adds 6 columns before the generated level and 8 columns after it with a flat ground platform, so 126 + 6 + 8 = 140
         int levelHeight = 14;
 
         List<Long> seeds = new ArrayList<>();

@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# TODO: Add the conda path to the PATH
-# Example: export PATH="/opt/anaconda/anaconda3/bin:$PATH"
-export PATH="your_path_to_conda:$PATH"
+# Add the conda path to the PATH
+#export PATH="/opt/anaconda/anaconda3/bin:$PATH"
+#export PATH="/opt/anaconda/bin:$PATH"
+export PATH="/home/daniicereezzo/miniforge3/bin:$PATH"
 
 # Activate the conda shell
 eval "$(conda shell.bash hook)"
 
-# TODO: Set the path to the conda environment
-# Example: conda_env_path="env_promp"
-conda_env_path="your_conda_environment_name"
+# Set the path to the conda environment
+#conda_env_path="/mnt/homeGPU/dcerezo/condaenvs/env_promp"
+conda_env_path="env_promp"
 
 # Set the TFHUB_CACHE_DIR to the current directory
 export TFHUB_CACHE_DIR=.
@@ -17,13 +18,20 @@ export TFHUB_CACHE_DIR=.
 # Activate the conda environment
 conda activate $conda_env_path
 
-# TODO: Set the seed
-# Example: seed=2024
-seed=your_seed
+# Get the JDK home path
+#JAVA_HOME="java-8-openjdk-amd64"
 
-# TODO: Set the number of levels to generate
-# Example: n_levels=200
-n_levels=your_number_of_levels
+# Set the seed
+seed=2024
+
+# Set the number of levels to generate
+n_levels=200
+
+# Print java version
+#java -version
+
+# Generate the levels with ProMP
+#java -jar ProMP.jar $seed $n_levels
 
 # Create the bin directory
 mkdir -p bin

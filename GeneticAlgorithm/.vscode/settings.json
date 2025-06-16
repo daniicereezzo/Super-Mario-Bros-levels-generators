@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "/mnt/homeGPU/dcerezo/TFG/Generators/GeneticAlgorithm/lib/gson-2.8.8.jar"
+    ]
+}

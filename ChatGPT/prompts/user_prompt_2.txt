@@ -1,0 +1,1 @@
+Remove everything from the previous message but the final generated levels and return them as a JSON list.
